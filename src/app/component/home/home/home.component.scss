@@ -1,0 +1,11 @@
+.background {
+    display: block;
+    z-index: 0;
+    position: absolute;
+}
+
+.container {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}

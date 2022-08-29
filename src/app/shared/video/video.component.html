@@ -1,0 +1,48 @@
+<div class="videoSettings" *ngIf="videoSettings">
+    <div class="videosTags" *ngIf="videosEnable">
+        <!-- No options -->
+        <video 
+            *ngIf="!videoSettings.enableMuted && !videoSettings.enableAutoPlay && !videoSettings.enableLoop && !videoSettings.enablePickToPick"
+            disablePictureInPicture>
+            <source src="{{videoSettings.path}}" (error)="onError()">
+        </video>
+        <!-- Mono options -->
+        <video 
+            *ngIf="videoSettings.enableMuted && !videoSettings.enableAutoPlay && !videoSettings.enableLoop && !videoSettings.enablePickToPick"
+            [muted]="'muted'"
+            disablePictureInPicture>
+            <source src="{{videoSettings.path}}" (error)="onError()">
+        </video>
+        <video 
+            *ngIf="!videoSettings.enableMuted && videoSettings.enableAutoPlay && !videoSettings.enableLoop && !videoSettings.enablePickToPick"
+            autoplay
+            disablePictureInPicture>
+            <source src="{{videoSettings.path}}" (error)="onError()">
+        </video>
+        <video 
+            *ngIf="!videoSettings.enableMuted && !videoSettings.enableAutoPlay && videoSettings.enableLoop && !videoSettings.enablePickToPick"
+            loop
+            disablePictureInPicture>
+            <source src="{{videoSettings.path}}" (error)="onError()">
+        </video>
+        <video 
+            *ngIf="!videoSettings.enableMuted && !videoSettings.enableAutoPlay && !videoSettings.enableLoop && videoSettings.enablePickToPick">
+            <source src="{{videoSettings.path}}" (error)="onError()">
+        </video>
+        <!-- Multi options -->
+        <video
+            *ngIf="videoSettings.enableMuted && videoSettings.enableAutoPlay && videoSettings.enableLoop && !videoSettings.enablePickToPick"
+            autoplay
+            [muted]="'muted'"
+            loop
+            disablePictureInPicture><!-- Multi options (muted, autoPlay, loop) -->
+            <source src="{{videoSettings.path}}" (error)="onError()">
+        </video>
+    </div>
+    <div class="videosTags" *ngIf="!videosEnable">
+        <app-image [imagePath]="videoSettings.alternative"></app-image>
+    </div>
+</div>
+<div class="videoSettingsNoLoad" *ngIf="!videoSettings">
+    <p>Video settings not loaded</p>
+</div>
