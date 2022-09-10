@@ -8,6 +8,10 @@ import { VideoComponent } from './shared/video/video.component';
 import { HomeBackgroundComponent } from './component/home/home-background/home-background.component';
 import { HomeComponent } from './component/home/home/home.component';
 import { HomeNavTopComponent } from './component/home/home-nav-top/home-nav-top.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +21,14 @@ import { HomeNavTopComponent } from './component/home/home-nav-top/home-nav-top.
     VideoComponent,
     HomeBackgroundComponent,
     HomeComponent,
-    HomeNavTopComponent
+    HomeNavTopComponent,
+    HomePageComponent,
+    AuthPageComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
