@@ -1,0 +1,18 @@
+@import '../../../_shared.scss';
+
+.nav-bar {
+    background-color: $color-background-gray-80;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    padding: 10px 0px;
+
+    .logo {
+        height: 100%;
+        width: 100px;
+    }
+
+    .title {
+        color: $color-font-main;
+    }
+}

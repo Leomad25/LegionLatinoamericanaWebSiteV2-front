@@ -1,1 +1,16 @@
-<p>image works!</p>
+<div class="container width-max" *ngIf="fixedWidth && !imageNotFound">
+    <img
+        src="{{imagePath}}"
+        alt="error"
+        (error)="onImageNotFound()">
+</div>
+<div class="container height-max" *ngIf="!fixedWidth && !imageNotFound">
+    <img
+        src="{{imagePath}}"
+        alt="error"
+        (error)="onImageNotFound()">
+</div>
+<div class="imageNotFound" *ngIf="imageNotFound">
+    <img src="/assets/image/no-photo.png" alt="error" (error)="onImageAltNotFound()" *ngIf="!imageAltNotFound">
+    <p *ngIf="imageAltNotFound">Image not found</p>
+</div>
