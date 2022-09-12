@@ -1,15 +1,32 @@
-<div class="nav-bar">
-    <div class="logo">
-        <app-image [imagePath]="links.logo_legion_latinoamericana" [fixedWidth]="false"></app-image>
+<div class="nav-bar" (mouseleave)="onHoverNavTop('in')" (mouseenter)="onHoverNavTop('out')">
+    <div class="main">
+        <div class="logo">
+            <app-image [imagePath]="links.logo_legion_latinoamericana" [fixedWidth]="false"></app-image>
+        </div>
+        <div class="title">
+            <div class="text">
+                <h1>{{strings.title}}</h1>
+                <h2>{{strings.game_name}}</h2>
+            </div>
+        </div>
+        <div class="button">
+            <app-home-nav-login-button
+                (onButtonClick)="onLoginButtonClick()">
+            </app-home-nav-login-button>
+        </div>
     </div>
-    <div class="title">
-        <h1>{{strings.title}}</h1>
-        <h2>{{strings.game_name}}</h2>
+    <div class="nav">
+        <mat-accordion>
+            <mat-expansion-panel [expanded]="!statusNavList">
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                </ul>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
-    <div class="button">
-
-    </div>
-</div>
-<div class="side-bar">
-
 </div>

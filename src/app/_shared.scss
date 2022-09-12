@@ -1,4 +1,19 @@
 $color-background-gray: rgba(150, 150, 150, 1);
+$color-background-gray-20: rgba(150, 150, 150, .2);
 $color-background-gray-80: rgba(150, 150, 150, .8);
 
+$color-background-black-40: rgba(0, 0, 0, .4);
+$color-background-black-60: rgba(0, 0, 0, .6);
+$color-background-black-80: rgba(0, 0, 0, .8);
+
 $color-font-main: rgba(255, 215, 0, 1);
+
+$nav-button-login-background: rgba(150, 150, 150, 0);
+$nav-button-login-background-hover: rgba(120, 120, 50, 1);
+$nav-button-login-font: rgba(255, 255, 255, 1);
+$nav-button-login-font-hover: rgba(0, 0, 0, 1);
+$nav-button-login-border: rgba(255, 215, 0,);
+
+$nav-list-item-background-hover: rgba(255, 215, 0, 1);
+$nav-list-item-font-hover: rgba(0, 0, 0, 1);
+$nav-list-item-border: rgba(255, 215, 0, 1);

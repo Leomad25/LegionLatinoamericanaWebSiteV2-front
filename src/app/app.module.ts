@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { ImageComponent } from './shared/image/image.component';
 import { BtnComponent } from './shared/btn/btn.component';
 import { VideoComponent } from './shared/video/video.component';
@@ -12,6 +13,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { HomeNavLoginButtonComponent } from './component/home/home-nav-login-button/home-nav-login-button.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeBodyMainComponent } from './component/home/home-boby/home-body-main/home-body-main.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +28,15 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     HomeNavTopComponent,
     HomePageComponent,
     AuthPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HomeNavLoginButtonComponent,
+    HomeBodyMainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

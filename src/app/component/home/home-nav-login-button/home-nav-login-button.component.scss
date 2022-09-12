@@ -1,0 +1,30 @@
+@import '../../../shared';
+
+.button-structure {
+    background-color: $nav-button-login-background;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid $nav-button-login-border;
+    transition: all .5s;
+
+    p {
+        color: $nav-button-login-font;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: all .3s;
+    }
+}
+
+.button-structure:hover {
+    background-color: $nav-button-login-background-hover;
+
+    p {
+        color: $nav-button-login-font-hover;
+    }
+}
